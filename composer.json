@@ -1,5 +1,5 @@
 {
-	"name": "drahak/restful",
+	"name": "vymak/restful",
 	"type": "library",
 	"description": "Nette REST API bundle",
 	"keywords": ["nette", "rest", "api", "drahak"],
@@ -15,20 +15,20 @@
 		"vendor-dir": "libs"
 	},
 	"require": {
-		"php": ">= 5.3.0",
-		"nette/application": "~2.0|~3.0",
-		"nette/bootstrap": "~2.0|~3.0",
-		"nette/caching": "~2.0|~3.0",
-		"nette/deprecated": "~2.0|~3.0",
-		"nette/di": "~2.0|~3.0",
-		"nette/http": "~2.0|~3.0",
-		"nette/reflection": "~2.0|~3.0",
-		"nette/robot-loader": "~2.0|~3.0",
-		"nette/security": "~2.0|~3.0",
-		"nette/utils": "~2.0|~3.0"
+		"php": ">= 5.6.0",
+		"nette/application": "~2.4|~3.0",
+		"nette/bootstrap": "~2.4|~3.0",
+		"nette/caching": "~2.5|~3.0",
+		"nette/deprecated": "~2.4|~3.0",
+		"nette/di": "~2.4|~3.0",
+		"nette/http": "~2.4|~3.0",
+		"nette/reflection": "~2.4|~3.0",
+		"nette/robot-loader": "~2.4|~3.0",
+		"nette/security": "~2.4|~3.0",
+		"nette/utils": "~2.4|~3.0"
 	},
 	"require-dev": {
-		"drahak/oauth2": "dev-master",
+		"vymak/oauth2": "dev-master",
 		"nette/tester": "~1.3",
 		"janmarek/mockista": "1.0.0",
 		"jakub-onderka/php-parallel-lint": "~0.8"

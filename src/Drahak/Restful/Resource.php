@@ -2,10 +2,10 @@
 namespace Drahak\Restful;
 
 use ArrayAccess;
+use Nette\SmartObject;
 use Serializable;
 use ArrayIterator;
 use IteratorAggregate;
-use Nette\Object;
 use Nette\Utils\Json;
 use Nette\MemberAccessException;
 
@@ -17,9 +17,15 @@ use Nette\MemberAccessException;
  * @property string $contentType Allowed result content type
  * @property-read array $data
  */
-class Resource extends Object implements ArrayAccess, Serializable, IteratorAggregate, IResource
+class Resource implements ArrayAccess, Serializable, IteratorAggregate, IResource
 {
 
+	use SmartObject {
+		__get as protected traitGet;
+		__set as protected traitSet;
+		__isset as protected traitIsset;
+		__unset as protected traitUnset;
+	}
 
 	/** @var array */
 	private $data = array();
@@ -133,7 +139,7 @@ class Resource extends Object implements ArrayAccess, Serializable, IteratorAggr
 	public function &__get($name)
 	{
 		try {
-			return parent::__get($name);
+			return $this->traitGet($name);
 		} catch (MemberAccessException $e) {
 			if (isset($this->data[$name])) {
 				return $this->data[$name];
@@ -151,7 +157,7 @@ class Resource extends Object implements ArrayAccess, Serializable, IteratorAggr
 	public function __set($name, $value)
 	{
 		try {
-			parent::__set($name, $value);
+			$this->traitSet($name, $value);
 		} catch (MemberAccessException $e) {
 			$this->data[$name] = $value;
 		}
@@ -164,7 +170,7 @@ class Resource extends Object implements ArrayAccess, Serializable, IteratorAggr
 	 */
 	public function __isset($name)
 	{
-		return !parent::__isset($name) ? isset($this->data[$name]) : TRUE;
+		return !$this->traitIsset($name) ? isset($this->data[$name]) : TRUE;
 	}
 
 	/**
@@ -175,7 +181,7 @@ class Resource extends Object implements ArrayAccess, Serializable, IteratorAggr
 	public function __unset($name)
 	{
 		try {
-			parent::__unset($name);
+			$this->traitUnset($name);
 		} catch (MemberAccessException $e) {
 			if (isset($this->data[$name])) {
 				unset($this->data[$name]);
