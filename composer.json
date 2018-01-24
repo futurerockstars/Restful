@@ -4,7 +4,7 @@
 	"description": "Nette REST API bundle",
 	"keywords": ["nette", "rest", "api", "drahak"],
 	"homepage": "http://www.drahak.eu",
-	"license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
+	"license": ["BSD-3-Clause", "GPL-2.0-only", "GPL-3.0-only"],
 	"authors": [
 		{
 			"name": "Drahomír Hanák",
