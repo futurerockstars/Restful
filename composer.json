@@ -25,7 +25,8 @@
 		"nette/reflection": "~2.4",
 		"nette/robot-loader": "~2.4",
 		"nette/security": "~2.4",
-		"nette/utils": "~2.4"
+		"nette/utils": "~2.4",
+		"tracy/tracy": "^2.6"
 	},
 	"require-dev": {
 		"vymak/oauth2": "dev-master",

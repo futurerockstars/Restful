@@ -10,7 +10,6 @@ use Nette\Configurator;
 use Nette\DI\ContainerBuilder;
 use Nette\DI\ServiceDefinition;
 use Nette\DI\Statement;
-use Nette\Diagnostics\Debugger;
 use Nette\Loaders\RobotLoader;
 use Nette\Utils\Validators;
 
