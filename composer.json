@@ -16,16 +16,16 @@
 	},
 	"require": {
 		"php": ">= 5.6.0",
-		"nette/application": "~2.4|~3.0",
-		"nette/bootstrap": "~2.4|~3.0",
-		"nette/caching": "~2.5|~3.0",
-		"nette/deprecated": "~2.4|~3.0",
-		"nette/di": "~2.4|~3.0",
-		"nette/http": "~2.4|~3.0",
-		"nette/reflection": "~2.4|~3.0",
-		"nette/robot-loader": "~2.4|~3.0",
-		"nette/security": "~2.4|~3.0",
-		"nette/utils": "~2.4|~3.0"
+		"nette/application": "~2.4",
+		"nette/bootstrap": "~2.4",
+		"nette/caching": "~2.5",
+		"nette/deprecated": "~2.4",
+		"nette/di": "~2.4",
+		"nette/http": "~2.4",
+		"nette/reflection": "~2.4",
+		"nette/robot-loader": "~2.4",
+		"nette/security": "~2.4",
+		"nette/utils": "~2.4"
 	},
 	"require-dev": {
 		"vymak/oauth2": "dev-master",
