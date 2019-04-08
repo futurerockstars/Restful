@@ -2,7 +2,6 @@
 namespace Drahak\Restful\Resource;
 
 use Nette\SmartObject;
-use Nette\Templating\Helpers;
 use Nette\Utils\MimeTypeDetector;
 
 /**
@@ -31,7 +30,18 @@ class Media
 	public function __construct($content, $contentType = NULL)
 	{
 		$this->content = $content;
-		$this->contentType = $contentType ? $contentType : MimeTypeDetector::fromString($content);
+		$this->contentType = $contentType ? $contentType : self::fromString($content);
+	}
+
+	/**
+	 * Returns the MIME content type of file.
+	 * @param  string
+	 * @return string
+	 */
+	private static function fromString($data)
+	{
+		$type = finfo_buffer(finfo_open(FILEINFO_MIME_TYPE), $data);
+		return strpos($type, '/') ? $type : 'application/octet-stream';
 	}
 
 	/**

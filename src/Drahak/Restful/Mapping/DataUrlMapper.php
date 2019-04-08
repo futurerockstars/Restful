@@ -2,8 +2,8 @@
 namespace Drahak\Restful\Mapping;
 
 use Drahak\Restful\Resource\Media;
+use Latte\Runtime\Filters;
 use Nette\SmartObject;
-use Nette\Templating\Helpers;
 use Nette\Utils\Strings;
 use Drahak\Restful\InvalidArgumentException;
 
@@ -32,7 +32,7 @@ class DataUrlMapper implements IMapper
 				'DataUrlMapper expects object of type Media, ' . (gettype($data)) . ' given'
 			);
 		}
-		return Helpers::dataStream((string)$data, $data->getContentType());
+		return Filters::dataStream((string)$data, $data->getContentType());
 	}
 
 	/**
