@@ -40,7 +40,7 @@ class StrictRoute implements IRouter
 
 	/**
 	 * @param  string $prefix 
-	 * @param  stirng $module
+	 * @param  string $module
 	 */
 	public function __construct($prefix = '', $module = NULL)
 	{

@@ -4,7 +4,6 @@ namespace Drahak\Restful\Mapping;
 use Drahak\Restful\Resource\Media;
 use Latte\Runtime\Filters;
 use Nette\SmartObject;
-use Nette\Templating\Helpers;
 use Nette\Utils\Strings;
 use Drahak\Restful\InvalidArgumentException;
 

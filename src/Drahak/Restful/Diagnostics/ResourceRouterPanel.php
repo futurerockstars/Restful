@@ -6,7 +6,6 @@ use Nette\SmartObject;
 use Traversable;
 use Drahak\Restful\Application\IResourceRouter;
 use Nette\Application\IRouter;
-use Nette\Templating\Helpers;
 use Tracy\IBarPanel;
 use Nette\Utils\Html;
 
