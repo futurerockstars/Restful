@@ -11,11 +11,17 @@
 			"homepage": "http://www.drahak.eu"
 		}
 	],
+  "repositories": [
+    {
+      "type": "github",
+      "url": "git@github.com:futurerockstars/OAuth2.git"
+    }
+  ],
 	"config": {
 		"vendor-dir": "libs"
 	},
 	"require": {
-		"php": ">= 5.6.0",
+		"php": ">=7.4.0",
 		"nette/application": "^3.0.0",
 		"nette/bootstrap": "^3.0.0",
 		"nette/caching": "^3.0.0",

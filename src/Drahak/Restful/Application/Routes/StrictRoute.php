@@ -53,7 +53,7 @@ class StrictRoute implements IRouter
 	 * @param  IRequest $request 
 	 * @return Request            
 	 */
-	public function match(Http\IRequest $request)
+	public function match(Http\IRequest $request): ?array
 	{
 		$path = $request->url->getPathInfo();
 		if (!Strings::contains($path, $this->prefix)) {
@@ -76,7 +76,7 @@ class StrictRoute implements IRouter
 		return $appRequest;
 	}
 	
-	public function constructUrl(Application\Request $request, Url $refUrl)
+	public function constructUrl(array $params, Http\UrlScript $refUrl): ?string
 	{
 		return NULL;
 	}
