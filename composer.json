@@ -1,5 +1,5 @@
 {
-	"name": "vymak/restful",
+	"name": "futurerockstars/restful",
 	"type": "library",
 	"description": "Nette REST API bundle",
 	"keywords": ["nette", "rest", "api", "drahak"],
