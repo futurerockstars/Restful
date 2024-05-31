@@ -39,7 +39,7 @@ class ResourceFactory implements IResourceFactory
 	 *
 	 * @throws  InvalidStateException If Accept header is unknown
 	 */
-	public function create(array $data = array())
+	public function create(array $data = array()): IResource
 	{
 		return new ConvertedResource($this->resourceConverter, $data);
 	}

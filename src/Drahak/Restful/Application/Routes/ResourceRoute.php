@@ -42,9 +42,10 @@ class ResourceRoute extends Route implements IResourceRouter
 		$this->actionDictionary = array();
 		if (isset($metadata['action']) && is_array($metadata['action'])) {
 			$this->actionDictionary = $metadata['action'];
-			$metadata['action'] = 'default';  
+			$metadata['action'] = 'default';
+			$flags &= ~IResourceRouter::GET;
 		} else {
-			$action = isset($metadata['action']) ? $metadata['action'] : 'default'; 
+			$action = isset($metadata['action']) ? $metadata['action'] : 'default';
 			if (is_string($metadata)) {
 				$metadataParts = explode(':', $metadata);
 				$action = end($metadataParts);
@@ -52,6 +53,7 @@ class ResourceRoute extends Route implements IResourceRouter
 			foreach ($this->methodDictionary as $methodName => $methodFlag) {
 				if (($flags & $methodFlag) == $methodFlag) {
 					$this->actionDictionary[$methodFlag] = $action;
+					$flags &= ~$methodFlag;
 				}
 			}
 		}
